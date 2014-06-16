@@ -33,6 +33,8 @@
 *
 *****************************************************************************/
 
+#ifdef BUILD_ANDROID
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "luajava.h"
@@ -3870,3 +3872,5 @@ JNIEXPORT jstring JNICALL Java_org_keplerproject_luajava_LuaState__1LfindTable
 
    return ( *env )->NewStringUTF( env , sub );
 }
+
+#endif

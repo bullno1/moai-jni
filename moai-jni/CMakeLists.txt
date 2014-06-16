@@ -1,6 +1,10 @@
 cmake_minimum_required ( VERSION 2.8.5 )
 project(moai-jni)
 
+if(BUILD_ANDROID)
+	add_definitions(-DBUILD_ANDROID)
+endif()
+
 add_library(moai-jni STATIC
     host.cpp
     luajava.c
